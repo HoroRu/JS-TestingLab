@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		'use strict'
+		//подозреваю что можно занести переменные в массив, затем их отсортировать, однако не знаю как это сделать, а лезть впепреди паровоза не хочу.
+		function getter() {
+			let a = +document.getElementById("a").value;
+			let b = +document.getElementById("b").value;
+			let c = +document.getElementById("c").value;
+
+			function counter() {
+				if ((a > b && a < c) || (a < b && a > c)) {
+					return a;
+				}
+				else if ((b > a && b < c) || (b < a && b > c)) {
+					return b;
+				}
+				else {
+					return c;
+				};
+			};
+			alert(counter(a, b, c));
+		};
+	</script>
+</head>
+
+<body>
+	<form action="">
+		<input type="text" id="a" pattern="[0-9]">
+		<input type="text" id="b" pattern="[0-9]">
+		<input type="text" id="c" pattern="[0-9]">
+		<input type="button" OnClick="getter()" value="просчитать"> </form>
+</body>
+
+</html>
