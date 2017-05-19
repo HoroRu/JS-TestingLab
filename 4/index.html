@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JS1 Homework</title>
+	<script src="script.js" defer></script>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: Tahoma;
+		}
+		
+		.bg {
+			margin: 50px auto;
+			height: 250px;
+			width: 600px;
+			background-color: white;
+			outline: 3px solid gray;
+		}
+		
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: white;
+			outline: 3px solid lightgray;
+			float: left;
+		}
+		
+		img {
+			display: block;
+			margin: 10px auto;
+			height: 130px;
+		}
+		
+		p {
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 6px;
+		}
+		
+		input[type="text"] {
+			margin: 0 auto;
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			width: 40px;
+		}
+		
+		input[type="button"] {
+			margin-top: 10px;
+			margin-right: 10px;
+			float: right;
+			width: 200px;
+			height: 30px;
+			text-align: center;
+			display: block;
+			border: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			background: white;
+			outline: 3px solid lightgray;
+		}
+		
+		input[type="button"]:hover {
+			background-color: lightgray;
+		}
+		
+		input[type="button"]:active {
+			background-color: gray;
+			outline: none;
+		}
+		
+		.bg > p {
+			float: left;
+			text-transform: none;
+			margin: 15px 15px;
+		}
+		
+		.clr {
+			clear: both;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="dima box"> <img src="https://static.au.ru/i/stickers/cool-boy.png" alt="">
+			<p>Дима</p>
+		</div>
+		<div class="masha box"> <img src="http://drawdoo.com/wp-content/uploads/2014/01/for-girls.png" alt="">
+			<p>Маша</p>
+			<input type="text" maxlength="3" pattern="[0-9]{3}" id="masha"> </div>
+		<div class="petya box"> <img src="https://img.clipartfest.com/5ea0669c83aa99357efc2f66856d626a_eric-cartman-villains-wiki-fandom-powered-by-wikia-eric-cartoon-character_150-150-thumbnail.png" alt="">
+			<p>Петя</p>
+			<input type="text" maxlength="3" pattern="[0-9]{3}" id="petya"> </div>
+		<div class="clr"></div>
+		<p>Введите количество яблок в окно под именами</p>
+		<input type="button" value="Рассчитать" OnClick="count_answer()"> </div>
+</body>
+
+</html>
