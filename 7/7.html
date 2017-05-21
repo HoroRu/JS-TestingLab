@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .bg{
+            margin: 0 auto;
+            width: 400px;
+            height: 200px;
+            background-color: #c1ffc1;
+            padding-top: 40px;
+            box-sizing: border-box;
+        }
+        input{
+            width: 350px;
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+    <input type="text" text="" placeholder="Введите число от 1 до 999:" id="text">
+    <input type="button" OnClick="show_options()" value=Просчитать>
+    </div>
+    
+    <script>
+        function show_options() {
+            let a = document.getElementById("text").value;
+            let c;
+            if (a < 1 || a > 999 || isNaN(a) === true) {
+                alert('вы ввели неправильное число')
+            }
+            else {
+                a = a.toString();
+                let n = a.length;
+                switch (n) {
+                case 1:
+                    n = "однозначное";
+                    break;
+                case 2:
+                    n = "двузначное";
+                    break;
+                case 3:
+                    n = "трехзначное";
+                    break;
+                };
+                if (a % 2) {
+                    c = "нечетное";
+                }
+                else {
+                    c = "четное";
+                };
+                alert(`${a} это ${c} ${n} число.`);
+            }
+        };
+    </script>
+</body>
+
+</html>
